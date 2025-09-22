@@ -1,0 +1,113 @@
+.gridContainer {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.container {
+    height: 80vh;
+    width: 100%;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 16px 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.viewToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px var(--shadow-color);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.title {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+// Hierarchy-specific styling
+:global(.ag-theme-alpine),
+:global(.ag-theme-alpine-dark) {
+  // Manager rows styling
+  .ag-row[data-is-manager="true"] {
+    background-color: rgba(var(--primary-color-rgb), 0.05) !important;
+    
+    &:hover {
+      background-color: rgba(var(--primary-color-rgb), 0.1) !important;
+    }
+  }
+  
+  // Hierarchy indentation styling
+  .hierarchy-cell {
+    display: flex;
+    align-items: center;
+    
+    .manager-icon {
+      color: var(--primary-color);
+      margin-right: 8px;
+    }
+    
+    .hierarchy-connector {
+      color: var(--border-color);
+      margin-right: 8px;
+    }
+    
+    .employee-name {
+      flex: 1;
+      
+      &.manager-name {
+        font-weight: bold;
+      }
+    }
+    
+    .team-info {
+      font-size: 0.8em;
+      color: var(--secondary-color);
+      margin-left: 8px;
+    }
+  }
+}
+
+.chip {
+    display: inline-block;
+    padding: 4px 8px;
+    line-height: 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 2px;
+    color: var(--chip-text-color);
+    background-color: var(--chip-bg-color);
+}

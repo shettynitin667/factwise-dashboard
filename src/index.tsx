@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
 import App from './App';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

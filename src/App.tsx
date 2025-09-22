@@ -1,10 +1,16 @@
-import './App.css';
+import GridData from "./pages/Dashboard";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import "./styles/globals.css";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      Factwise Dashboard
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Navbar />
+        <GridData />
+      </div>
+    </ThemeProvider>
   );
 }
 
